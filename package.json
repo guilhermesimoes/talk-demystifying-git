@@ -1,0 +1,19 @@
+{
+  "name": "talk-demystifying-git",
+  "version": "1.0.0",
+  "description": "These are the slides for my \"Demystifying Git\" talk.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermesimoes/talk-demystifying-git.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guilhermesimoes/talk-demystifying-git/issues"
+  },
+  "homepage": "https://github.com/guilhermesimoes/talk-demystifying-git#readme",
+  "dependencies": {
+    "cleaver": "^0.8.7"
+  }
+}

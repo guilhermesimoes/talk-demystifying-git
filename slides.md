@@ -23,27 +23,43 @@ output: index.html
 
 * pull
 
-* status
+--
+
+### The Advantages of Git
+
+* Flexible
+
+* Hard to lose track of work
 
 --
 
-### Reverting stuff
+### The Problem With Git
 
-* git checkout -- &lt;file/dir&gt;
+* <p>Bad UX</p>
 
-* git reset --hard HEAD
+--
+
+### Deleting stuff
 
 * git branch --delete &lt;branch&gt;
 
 * git push origin --delete &lt;branch&gt;
 
+* git checkout -- &lt;file/dir&gt;
+
+* git reset --hard HEAD
+
+-- git-cookbook
+
+-- git-spellbook
+
 --
 
 ### Fundamentals
 
 * Commit objects
 
-* Labels
+* References to commit objects
 
 --
 
@@ -51,9 +67,31 @@ output: index.html
 
 * Commit objects
 
-* Labels
+* References to commit objects
 
 * ...and that's it!
+
+--
+
+# `git add`
+
+-- working-tree-staging-area
+
+-- amazon-worker
+
+--
+
+### `git add --patch`
+
+Interactively choose what will be committed
+
+* y - yes
+
+* n - no
+
+* s - split
+
+* q - quit
 
 --
 
@@ -61,7 +99,50 @@ output: index.html
 
 --
 
+### `git commit`
+
+Creates a new commit object where
+
+<div class='commit-id-equation'>
+  <span class='id'>
+    ID
+  </span>
+  <span class="equals">
+    =
+  </span>
+  <div class='sum'>
+    <span>content</span>
+    <span>+</span>
+    <span>message</span>
+    <span>+</span>
+    <span>author</span>
+    <span>+</span>
+    <span>date</span>
+    <span>+</span>
+    <span>previous commit ID</span>
+  </div>
+</div>
+--
+
+# Commits never change
+
+--
+
+# But we can rewrite history
+
+--
+
+# `git tag`
+
+--
+
 # `git branch`
+
+--
+
+# HEAD
+
+-- snow-trail-map
 
 --
 
@@ -71,19 +152,79 @@ output: index.html
 
 --
 
-### “Labels”
+# `git stash`
 
-* HEAD
+--
+
+# `git remote`
+
+--
+
+# `git fetch`
+
+--
+
+# origin/master vs origin master
+
+--
+
+### origin/master vs origin master
+
+Think of commands as functions
+
+--
+
+### origin/master vs origin master
+
+Some functions receive two arguments:
+
+gitPush(remote, branch)
+
+git push origin master
+
+--
+
+### origin/master vs origin master
+
+Some functions receive one argument:
+
+gitReset(reference)
+
+git reset origin/master
+
+--
+
+### origin/master vs origin master
+
+You still gotta know which is which.
+
+--
+
+### origin/master vs origin master
+
+You still gotta know which is which.
+
+But usually the remote (origin) is implicit.
+
+--
+
+# `git reset`
+
+--
+
+### References / Labels
+
+* commit hash
+
+* tag
 
 * branch
 
 * remote/branch
 
-* tag
+* HEAD
 
 * stash
-
-* commit
 
 --
 
@@ -107,11 +248,86 @@ output: index.html
 
 --
 
-# `git reset --hard`
+### Implications
+
+--
+
+### Implications
+
+* <p>Everything is a reference</p>
+
+--
+
+### Implications
+
+* Everything is a reference
+
+* Every command accepts a reference
+
+-- git-references-exercise
+
+--
+
+# `git merge`
+
+--
+
+# Rewriting history
+
+--
+
+### `git commit --amend`
+
+Allows "changing" the last commit
+
+--
+
+### `git commit --amend`
+
+Allows "changing" the last commit
+
+(It's actually rewriting history!)
 
 --
 
 # `git reflog`
+
+--
+
+# `git rebase`
+
+-- fight
+
+<div class='oponents'>
+  <h1>merge</h1>
+  <h1>rebase</h1>
+</div>
+
+-- merge-problem
+
+--
+
+### `merge vs rebase`
+
+* <p>Depends on team workflow</p>
+
+--
+
+### `merge vs rebase`
+
+* Depends on team workflow
+
+* There's no best approach
+
+--
+
+### `merge vs rebase`
+
+* Depends on team workflow
+
+* There's no best approach
+
+  (though it's clearly rebase)
 
 --
 
@@ -122,3 +338,65 @@ output: index.html
 * [Git For Ages 4 And Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4)
 
 * [Classic Programmer Paintings](http://classicprogrammerpaintings.com/)
+
+--
+
+# Bonus Slides / Complaints
+
+--
+
+# `git status`
+
+--
+
+### `git status`
+
+use "git checkout -- &lt;file&gt;..." to discard changes in working directory
+
+--
+
+### `git status`
+
+gitCheckout(--, file) // discard changes in working directory
+
+--
+
+# ???
+
+--
+
+### How about
+
+gitDiscardChanges(file)
+
+--
+
+### How about
+
+git discard &lt;file&gt;
+
+--
+
+### `git status`
+
+use "git add &lt;file&gt;" to update what will be committed
+
+use "git reset HEAD &lt;file&gt;" to unstage
+
+--
+
+# ???
+
+--
+
+### How about
+
+git stage &lt;file&gt;
+
+git unstage &lt;file&gt;
+
+--
+
+git reflog expire --expire-unreachable=now --all
+
+git gc --prune=now
