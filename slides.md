@@ -4,7 +4,7 @@ author:
 style: styles.css
 output: index.html
 
---
+-- sky
 
 # Demystifying Git
 ## or how I learned not to be afraid of detached head
