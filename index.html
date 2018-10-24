@@ -373,7 +373,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .amazon-worker {
   background: url('images/amazon-fulfillment-center.jpg') no-repeat center center fixed;
-  background-size: contain;
+  background-size: cover;
 }
 
 .snow-trail-map {
@@ -416,15 +416,28 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   align-items: center;
 }
 
-.id, .equals {
+.commit-id-equation .id, .commit-id-equation .equals {
   font-size: 5em;
 }
 
-.sum {
+.commit-id-equation .sum {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.pull-equation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.pull-equation span {
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .fight .slide-content {
@@ -736,45 +749,56 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </section>
   </div>
   <div class="slide hidden" id="slide-42">
-    <section class="slide-content"><h1 id="rewriting-history">Rewriting history</h1>
+    <section class="slide-content"><h1 id="git-pull"><code>git pull</code></h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-43">
+    <section class="slide-content"><div class='pull-equation'>
+  <span><code>pull</code></span>
+  <span><code>=</code></span>
+  <span><code>fetch + merge</code></span>
+</div></section>
+  </div>
+  <div class="slide hidden" id="slide-44">
+    <section class="slide-content"><h1 id="rewriting-history">Rewriting history</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-45">
     <section class="slide-content"><h3 id="git-commit-amend"><code>git commit --amend</code></h3>
 <p>Allows &quot;changing&quot; the last commit</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-44">
+  <div class="slide hidden" id="slide-46">
     <section class="slide-content"><h3 id="git-commit-amend"><code>git commit --amend</code></h3>
 <p>Allows &quot;changing&quot; the last commit</p>
 <p>(It&#39;s actually rewriting history!)</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-45">
+  <div class="slide hidden" id="slide-47">
     <section class="slide-content"><h1 id="git-reflog"><code>git reflog</code></h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-46">
+  <div class="slide hidden" id="slide-48">
     <section class="slide-content"><h1 id="git-rebase"><code>git rebase</code></h1>
 </section>
   </div>
-  <div class="slide hidden  fight" id="slide-47">
+  <div class="slide hidden  fight" id="slide-49">
     <section class="slide-content"><div class='oponents'>
   <h1>merge</h1>
   <h1>rebase</h1>
 </div></section>
   </div>
-  <div class="slide hidden  merge-problem" id="slide-48">
+  <div class="slide hidden  merge-problem" id="slide-50">
     <section class="slide-content"></section>
   </div>
-  <div class="slide hidden" id="slide-49">
+  <div class="slide hidden" id="slide-51">
     <section class="slide-content"><h3 id="merge-vs-rebase"><code>merge vs rebase</code></h3>
 <ul>
 <li><p>Depends on team workflow</p></li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-50">
+  <div class="slide hidden" id="slide-52">
     <section class="slide-content"><h3 id="merge-vs-rebase"><code>merge vs rebase</code></h3>
 <ul>
 <li><p>Depends on team workflow</p>
@@ -784,7 +808,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-51">
+  <div class="slide hidden" id="slide-53">
     <section class="slide-content"><h3 id="merge-vs-rebase"><code>merge vs rebase</code></h3>
 <ul>
 <li><p>Depends on team workflow</p>
@@ -795,7 +819,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-52">
+  <div class="slide hidden" id="slide-54">
     <section class="slide-content"><h3 id="references">References</h3>
 <ul>
 <li><p><a href="http://learngitbranching.js.org/">Learn Git Branching</a></p>
@@ -807,12 +831,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-53">
-    <section class="slide-content"><p>git reflog expire --expire-unreachable=now --all</p>
-<p>git gc --prune=now</p>
-</section>
-  </div>
-  <div class="slide hidden author-slide" id="slide-54">
+  <div class="slide hidden author-slide" id="slide-55">
     <section class="slide-content"><div class="author">
   <h1 class="name">Guilherme Simões</h1>
 </div>

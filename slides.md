@@ -272,6 +272,18 @@ But usually the remote (origin) is implicit.
 
 --
 
+# `git pull`
+
+--
+
+<div class='pull-equation'>
+  <span>`pull`</span>
+  <span>`=`</span>
+  <span>`fetch + merge`</span>
+</div>
+
+--
+
 # Rewriting history
 
 --
@@ -338,9 +350,3 @@ Allows "changing" the last commit
 * [Git For Ages 4 And Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4)
 
 * [Classic Programmer Paintings](http://classicprogrammerpaintings.com/)
-
---
-
-git reflog expire --expire-unreachable=now --all
-
-git gc --prune=now

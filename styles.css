@@ -15,7 +15,7 @@
 
 .amazon-worker {
   background: url('images/amazon-fulfillment-center.jpg') no-repeat center center fixed;
-  background-size: contain;
+  background-size: cover;
 }
 
 .snow-trail-map {
@@ -49,15 +49,28 @@
   align-items: center;
 }
 
-.id, .equals {
+.commit-id-equation .id, .commit-id-equation .equals {
   font-size: 5em;
 }
 
-.sum {
+.commit-id-equation .sum {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.pull-equation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.pull-equation span {
+  font-size: 3em;
+  font-weight: bold;
 }
 
 .fight .slide-content {
